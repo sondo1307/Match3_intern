@@ -8,7 +8,9 @@
   - Chứa thông tin ảnh, id (vị trí ô)
   - Lắng nghe event insert, tự động dịch khi có 1 prefab mới chèn vào
   - Lắng nghe event match 3, tự động co lại khi match 3
-- GameplayManager
-  - Chứa event win và lose
 - Tái sử dụng script Board của code base để lưu các ô được sinh ra trong dict
   - Autoplay Win: Lần lượt từ trên xuống dưới, gọi hàm insert của script CellBotton sẽ match 3 cái giống nhau.
+- GameplayManager
+  - Chứa event win, trigger khi dict lưu các ô hết
+  - Chứa event lose, trigger khi hết 5 slot.
+- UI Win + UI Lose : Lắng nghe event từ GameplayManager.
