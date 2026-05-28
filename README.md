@@ -1,2 +1,14 @@
 # Match3_intern
-
+- Tạo script BottomController
+  - Kiểm soát prefab temp ảo tượng chưng cho mỗi ô được nhấn.
+  - Bottom Controller Kiểm soát vị trí của prefap temp ảo đầu tiên và truyền vị trí của các prefab temp ảo sau.
+  - Kiểm tra full 5 ô - Trigger Lost
+  - Kiểm tra có 3 ô liên tiếp giống nhau
+- CellBotton: Script hướng đối tượng riêng cho 1 prefab temp ảo
+  - Chứa thông tin ảnh, id (vị trí ô)
+  - Lắng nghe event insert, tự động dịch khi có 1 prefab mới chèn vào
+  - Lắng nghe event match 3, tự động co lại khi match 3
+- GameplayManager
+  - Chứa event win và lose
+- Tái sử dụng script Board của code base để lưu các ô được sinh ra trong dict
+  - Autoplay Win: Lần lượt từ trên xuống dưới, gọi hàm insert của script CellBotton sẽ match 3 cái giống nhau.
